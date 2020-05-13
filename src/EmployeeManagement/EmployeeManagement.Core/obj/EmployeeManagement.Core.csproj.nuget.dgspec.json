@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\Work_Space\\Practice\\DDD\\DDD-Practice\\OfficeManagement\\src\\EmployeeManagement\\EmployeeManagement.Core\\EmployeeManagement.Core.csproj": {}
+    "D:\\Work_Space\\Practice\\DDD\\DDD-Practice\\OfficeManagement\\src\\EmployeeManagement\\EmployeeManagement.Core\\EmployeeManagement.Core.csproj": {}
   },
   "projects": {
-    "d:\\Work_Space\\Practice\\DDD\\DDD-Practice\\OfficeManagement\\src\\EmployeeManagement\\EmployeeManagement.Core\\EmployeeManagement.Core.csproj": {
+    "D:\\Work_Space\\Practice\\DDD\\DDD-Practice\\OfficeManagement\\src\\EmployeeManagement\\EmployeeManagement.Core\\EmployeeManagement.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Work_Space\\Practice\\DDD\\DDD-Practice\\OfficeManagement\\src\\EmployeeManagement\\EmployeeManagement.Core\\EmployeeManagement.Core.csproj",
+        "projectUniqueName": "D:\\Work_Space\\Practice\\DDD\\DDD-Practice\\OfficeManagement\\src\\EmployeeManagement\\EmployeeManagement.Core\\EmployeeManagement.Core.csproj",
         "projectName": "EmployeeManagement.Core",
-        "projectPath": "d:\\Work_Space\\Practice\\DDD\\DDD-Practice\\OfficeManagement\\src\\EmployeeManagement\\EmployeeManagement.Core\\EmployeeManagement.Core.csproj",
+        "projectPath": "D:\\Work_Space\\Practice\\DDD\\DDD-Practice\\OfficeManagement\\src\\EmployeeManagement\\EmployeeManagement.Core\\EmployeeManagement.Core.csproj",
         "packagesPath": "C:\\Users\\Al Amin\\.nuget\\packages\\",
-        "outputPath": "d:\\Work_Space\\Practice\\DDD\\DDD-Practice\\OfficeManagement\\src\\EmployeeManagement\\EmployeeManagement.Core\\obj\\",
+        "outputPath": "D:\\Work_Space\\Practice\\DDD\\DDD-Practice\\OfficeManagement\\src\\EmployeeManagement\\EmployeeManagement.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

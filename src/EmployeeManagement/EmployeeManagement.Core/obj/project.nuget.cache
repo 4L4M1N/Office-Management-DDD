@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Z8A6FX1uPb5Q+KtUPHVlaUzWUHageQD+5UPcTFU/JDPkhyYOneYYI3bp3laKcEzahCA6+8worccKUFAm7/5W6Q==",
+  "dgSpecHash": "fb354SYoDDJODUUENYzbp8Uj5Fg6qmBk1Ky5D83Q5hGJGkrS73zbwWopYXKmY3r13MMH/wFe4Q9Dc2jvCYFxow==",
   "success": true,
-  "projectFilePath": "d:\\Work_Space\\Practice\\DDD\\DDD-Practice\\OfficeManagement\\src\\EmployeeManagement\\EmployeeManagement.Core\\EmployeeManagement.Core.csproj",
+  "projectFilePath": "D:\\Work_Space\\Practice\\DDD\\DDD-Practice\\OfficeManagement\\src\\EmployeeManagement\\EmployeeManagement.Core\\EmployeeManagement.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
