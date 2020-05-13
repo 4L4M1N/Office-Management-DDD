@@ -1,11 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2cu5NQ5de/AN+dm6hNDbJpllM6WHyri7x5CV32nazno52Z6hPDbE2ShSNfdWlhDFbeQoM9etPRhNUmwwxHkfPA==",
+  "dgSpecHash": "BT6RUqQYqeA3930mwzQ8NSTBy6nXhIuNl02bpdQU/XcPV9nptu+THlpbJwk/MM2d4XT6p6otG2OWadcpjMH0cg==",
   "success": true,
   "projectFilePath": "D:\\Work_Space\\Practice\\DDD\\DDD-Practice\\OfficeManagement\\src\\TaskManagement\\TaskManagement.Core\\TaskManagement.Core.csproj",
-  "expectedPackageFiles": [
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

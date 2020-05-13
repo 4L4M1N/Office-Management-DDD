@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text;
 
 namespace TaskManagement.Core.SeedWork
 {
@@ -49,7 +50,7 @@ namespace TaskManagement.Core.SeedWork
             {
                 this.properties = GetType()
                     .GetProperties(BindingFlags.Instance | BindingFlags.Public)
-                    .Where(p => CustomAttributeExtensions.GetCustomAttribute((MemberInfo) p, typeof(IgnoreDataMemberAttribute)) == null)
+                    .Where(p => p.GetCustomAttribute(typeof(IgnoreDataMemberAttribute)) == null)
                     .ToList();
             }
 
