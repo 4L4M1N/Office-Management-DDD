@@ -13,6 +13,8 @@ namespace TaskManagement.Infrastructure.Data
 
         }
         public DbSet<Task> Tasks { get; set; }
+        public DbSet<Supervisor> Supervisors { get; set; }
+        public DbSet<TeamMember> TeamMembers { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
