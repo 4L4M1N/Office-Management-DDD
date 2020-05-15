@@ -8,7 +8,7 @@ namespace TaskManagement.Core.Model.BoardAggregate
     public class Board : Entity<Guid>
     {
         public string Name { get; set; }
-        public Guid TaskId { get; set; }
+       
         private List<Task> _tasks;
 
         public IEnumerable<Task> Tasks
