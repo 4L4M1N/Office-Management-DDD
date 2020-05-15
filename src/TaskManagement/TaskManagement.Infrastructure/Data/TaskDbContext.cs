@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
-using TaskManagement.Core.Model.TaskAggregate;
+using TaskManagement.Core.Model.BoardAggregate;
 
 namespace TaskManagement.Infrastructure.Data
 {

@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using TaskManagement.Core.SeedWork;
 
-namespace TaskManagement.Core.Model.TaskAggregate
+namespace TaskManagement.Core.Model.BoardAggregate
 {
     public class TeamMember : Entity<Guid>
     {

@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using TaskManagement.Core.SeedWork;
 
-namespace TaskManagement.Core.Model.TaskAggregate
+namespace TaskManagement.Core.Model.BoardAggregate
 {
     public class Task : Entity<int>
     {
@@ -12,6 +10,7 @@ namespace TaskManagement.Core.Model.TaskAggregate
         public DateTime AssignDate { get; set; }
         public DateTime CompleteDate { get; set; }
         public DateTime DueDate { get; set; }
+        public Guid BoardId { get; set; }
         public bool IsCompleted { get; set; }
         public Guid SupervisorId { get; set; }
         public Guid TeamMemberId { get; set; }
@@ -31,7 +30,7 @@ namespace TaskManagement.Core.Model.TaskAggregate
             DueDate = DueDate;
         }
 
-        public static Task Create(string name, string description, DateTime assignDate, DateTime dueDate, Guid supervisorId)
+        public static Task Create(string name, string description, DateTime assignDate, DateTime dueDate, Guid supervisorId,Guid boardId)
         {
             var task = new Task();
             task.Name = name;
@@ -40,6 +39,7 @@ namespace TaskManagement.Core.Model.TaskAggregate
             task.DueDate = dueDate;
             task.IsCompleted = false;
             task.SupervisorId = supervisorId;
+            task.BoardId = boardId;
             return task;
         }
 
