@@ -9,6 +9,8 @@
     <Compile Remove="Migrations\20200515163618_board.Designer.cs" />
     <Compile Remove="Migrations\20200515163806_board.cs" />
     <Compile Remove="Migrations\20200515163806_board.Designer.cs" />
+    <Compile Remove="Migrations\20200516161218_fluentConfigTasktest.cs" />
+    <Compile Remove="Migrations\20200516161218_fluentConfigTasktest.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

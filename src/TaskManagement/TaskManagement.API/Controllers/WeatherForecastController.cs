@@ -4,13 +4,18 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using TaskManagement.Core.Model.BoardAggregate;
+using TaskManagement.Infrastructure.Data;
+using Task = TaskManagement.Core.Model.BoardAggregate.Task;
 
 namespace TaskManagement.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
+
     {
+        private readonly TaskDbContext _context;
         private static readonly string[] Summaries = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
@@ -18,9 +23,10 @@ namespace TaskManagement.API.Controllers
 
         private readonly ILogger<WeatherForecastController> _logger;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger,TaskDbContext context)
         {
             _logger = logger;
+            _context = context;
         }
 
         [HttpGet]
