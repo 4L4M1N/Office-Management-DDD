@@ -17,11 +17,11 @@ namespace TaskManagement.Core.Model.BoardAggregate
             Id = id;
         }
 
-        public static TeamMember Create(Guid id, string name)
-        {
-            var teamMember = new TeamMember(id);
-            teamMember.Name = name;
-            return teamMember;
-        }
+        //public static TeamMember Create(Guid id, string name)
+        //{
+        //    var teamMember = new TeamMember(id);
+        //    teamMember.Name = name;
+        //    return teamMember;
+        //}
     }
 }

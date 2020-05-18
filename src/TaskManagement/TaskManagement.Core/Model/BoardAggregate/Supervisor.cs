@@ -17,11 +17,11 @@ namespace TaskManagement.Core.Model.BoardAggregate
             Id = id;
         }
 
-        public static Supervisor Create(Guid id, string name)
-        {
-             var supervisor = new Supervisor(id);
-             supervisor.Name = name;
-             return supervisor;
-        }
+        //public static Supervisor Create(Guid id, string name)
+        //{
+        //     var supervisor = new Supervisor(id);
+        //     supervisor.Name = name;
+        //     return supervisor;
+        //}
     }
 }
