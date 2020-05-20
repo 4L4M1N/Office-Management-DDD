@@ -31,6 +31,11 @@ namespace TaskManagement.Infrastructure.Repositories
             _context.SaveChanges();
         }
 
+        public void GetAllBoard()
+        {
+            //var result = _context.Boards
+        }
+
         //TODO: Learn about IDisposable
         private bool disposed = false;
 

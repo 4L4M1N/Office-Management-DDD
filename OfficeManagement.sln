@@ -9,11 +9,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EmployeeManagement", "Emplo
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TaskManagement", "TaskManagement", "{811DF041-63D3-4C66-BA5E-BCC206FCC91E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagement.Core", "src\TaskManagement\TaskManagement.Core\TaskManagement.Core.csproj", "{DBE6FFC0-F37A-4F26-B25A-1E6410FFF5DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManagement.Core", "src\TaskManagement\TaskManagement.Core\TaskManagement.Core.csproj", "{DBE6FFC0-F37A-4F26-B25A-1E6410FFF5DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagement.Infrastructure", "src\TaskManagement\TaskManagement.Infrastructure\TaskManagement.Infrastructure.csproj", "{DD36ED85-A3F6-45F8-B2BA-06AB8F36A2B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManagement.Infrastructure", "src\TaskManagement\TaskManagement.Infrastructure\TaskManagement.Infrastructure.csproj", "{DD36ED85-A3F6-45F8-B2BA-06AB8F36A2B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagement.API", "src\TaskManagement\TaskManagement.API\TaskManagement.API.csproj", "{14B810D5-41FE-433F-AF70-1F84AC197D09}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManagement.API", "src\TaskManagement\TaskManagement.API\TaskManagement.API.csproj", "{14B810D5-41FE-433F-AF70-1F84AC197D09}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
