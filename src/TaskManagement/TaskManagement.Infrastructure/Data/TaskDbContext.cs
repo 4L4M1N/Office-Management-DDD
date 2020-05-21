@@ -20,7 +20,7 @@ namespace TaskManagement.Infrastructure.Data
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
-            builder.ApplyConfiguration(new TaskEntityTypeConfiguration());
+            //builder.ApplyConfiguration(new TaskEntityTypeConfiguration());
         }
 
 
