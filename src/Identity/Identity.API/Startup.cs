@@ -35,6 +35,32 @@ namespace Identity.API
             services.AddIdentity<AppUser, IdentityRole>()
                 .AddEntityFrameworkStores<AppDbContext>()
                 .AddDefaultTokenProviders();
+
+            //IdentityServer Congfiguration
+            services.AddIdentityServer(options => {
+                options.Events.RaiseErrorEvents = true;
+                options.Events.RaiseInformationEvents = true;
+                options.Events.RaiseFailureEvents = true;
+                options.Events.RaiseSuccessEvents = true;
+            })
+            // this adds the config data from DB (clients, resources)
+            .AddConfigurationStore(options => {
+                options.ConfigureDbContext = opt =>
+                {
+                    opt.UseSqlServer(Configuration.GetConnectionString("TaskIdentityDB"),
+                        optionsBuilder => optionsBuilder.MigrationsAssembly(typeof(Startup).Assembly.GetName().Name));
+                };
+            })
+            //PersistedGrantDbContext ConfigurationDbContext
+            //// this adds the operational data from DB (codes, tokens, consents)
+            .AddOperationalStore(options => {
+                options.ConfigureDbContext = opt =>
+                    {
+                        opt.UseSqlServer(Configuration.GetConnectionString("TaskIdentityDB"),
+                            optionsBuilder => optionsBuilder.MigrationsAssembly(typeof(Startup).Assembly.GetName().Name));
+                    };
+                options.EnableTokenCleanup = true;
+            });
             services.AddControllers();
         }
 
