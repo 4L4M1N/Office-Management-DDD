@@ -60,7 +60,7 @@ namespace Identity.API
                             optionsBuilder => optionsBuilder.MigrationsAssembly(typeof(Startup).Assembly.GetName().Name));
                     };
                 options.EnableTokenCleanup = true;
-            });
+            }).AddAspNetIdentity<AppUser>();
             services.AddControllers();
         }
 
@@ -75,7 +75,7 @@ namespace Identity.API
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
+            app.UseIdentityServer();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
