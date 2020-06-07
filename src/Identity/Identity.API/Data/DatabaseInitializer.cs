@@ -9,6 +9,10 @@ namespace Identity.API.Data
 {
     public class DatabaseInitializer
     {
+        public static void Init(IServiceProvider provider)
+        {
+            InitializeIdentityServer(provider);
+        }
         private static void InitializeIdentityServer(IServiceProvider provider)
         {
             var context = provider.GetRequiredService<ConfigurationDbContext>();

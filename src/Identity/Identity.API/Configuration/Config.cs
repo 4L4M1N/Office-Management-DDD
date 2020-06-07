@@ -36,7 +36,7 @@ namespace Identity.API.Configuration
                 {
                     ClientId = "TaskManagement",
                     ClientName = "TaskManagement Client",
-                    AllowedGrantTypes = GrantTypes.Code,
+                    AllowedGrantTypes = GrantTypes.Implicit,
                     RequirePkce = true, // Specifies whether a proof key is required for authorization code based token requests (defaults to false).
                     RequireClientSecret = false,
                     RedirectUris = { "http://localhost:4200" },
