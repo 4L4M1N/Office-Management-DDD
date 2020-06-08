@@ -61,6 +61,7 @@ namespace Identity.API
                     };
                 options.EnableTokenCleanup = true;
             }).AddAspNetIdentity<AppUser>();
+            services.AddAuthentication();
             services.AddControllers();
         }
 
