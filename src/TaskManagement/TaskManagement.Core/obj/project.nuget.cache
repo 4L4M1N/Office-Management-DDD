@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "32y97GipxIJEI+NWtKbh6pvOzxSMJNYzMW6eEfjURvYDs/JSOierVahR2LfhZqwFHeYH/68vg+3gHaQ6WU9Ohg==",
+  "dgSpecHash": "BT6RUqQYqeA3930mwzQ8NSTBy6nXhIuNl02bpdQU/XcPV9nptu+THlpbJwk/MM2d4XT6p6otG2OWadcpjMH0cg==",
   "success": true,
-  "projectFilePath": "d:\\Work_Space\\Practice\\DDD\\DDD-Practice\\OfficeManagement\\src\\TaskManagement\\TaskManagement.Core\\TaskManagement.Core.csproj",
+  "projectFilePath": "D:\\Work_Space\\Practice\\DDD\\DDD-Practice\\OfficeManagement\\src\\TaskManagement\\TaskManagement.Core\\TaskManagement.Core.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
