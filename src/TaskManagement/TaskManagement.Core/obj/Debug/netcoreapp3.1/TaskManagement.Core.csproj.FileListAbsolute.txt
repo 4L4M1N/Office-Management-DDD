@@ -1,9 +1,0 @@
-D:\Work_Space\Practice\DDD\DDD-Practice\OfficeManagement\src\TaskManagement\TaskManagement.Core\bin\Debug\netcoreapp3.1\TaskManagement.Core.deps.json
-D:\Work_Space\Practice\DDD\DDD-Practice\OfficeManagement\src\TaskManagement\TaskManagement.Core\bin\Debug\netcoreapp3.1\TaskManagement.Core.dll
-D:\Work_Space\Practice\DDD\DDD-Practice\OfficeManagement\src\TaskManagement\TaskManagement.Core\bin\Debug\netcoreapp3.1\TaskManagement.Core.pdb
-D:\Work_Space\Practice\DDD\DDD-Practice\OfficeManagement\src\TaskManagement\TaskManagement.Core\obj\Debug\netcoreapp3.1\TaskManagement.Core.csprojAssemblyReference.cache
-D:\Work_Space\Practice\DDD\DDD-Practice\OfficeManagement\src\TaskManagement\TaskManagement.Core\obj\Debug\netcoreapp3.1\TaskManagement.Core.csproj.CoreCompileInputs.cache
-D:\Work_Space\Practice\DDD\DDD-Practice\OfficeManagement\src\TaskManagement\TaskManagement.Core\obj\Debug\netcoreapp3.1\TaskManagement.Core.AssemblyInfoInputs.cache
-D:\Work_Space\Practice\DDD\DDD-Practice\OfficeManagement\src\TaskManagement\TaskManagement.Core\obj\Debug\netcoreapp3.1\TaskManagement.Core.AssemblyInfo.cs
-D:\Work_Space\Practice\DDD\DDD-Practice\OfficeManagement\src\TaskManagement\TaskManagement.Core\obj\Debug\netcoreapp3.1\TaskManagement.Core.dll
-D:\Work_Space\Practice\DDD\DDD-Practice\OfficeManagement\src\TaskManagement\TaskManagement.Core\obj\Debug\netcoreapp3.1\TaskManagement.Core.pdb
