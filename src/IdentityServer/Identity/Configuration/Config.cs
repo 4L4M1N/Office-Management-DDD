@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using IdentityServer4;
 using IdentityServer4.Models;
 
 namespace Identity.Configuration
@@ -27,6 +28,20 @@ namespace Identity.Configuration
                     ClientId = "Task",
                     ClientName = "Task Client",
                     AllowedGrantTypes = GrantTypes.Code,
+                    //Client allowed to receive token
+                    RedirectUris =
+                    {
+                        "https://localhost:4444/signin"
+                    },
+                    AllowedScopes =
+                    {
+                        IdentityServerConstants.StandardScopes.OpenId,
+                        IdentityServerConstants.StandardScopes.Profile
+                    },
+                    ClientSecrets =
+                    {
+                        new Secret("secret".Sha256())
+                    }
                 }
             };
         }
