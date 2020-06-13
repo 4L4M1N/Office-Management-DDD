@@ -15,7 +15,7 @@ namespace Identity.Configuration
             return new List<IdentityResource>
             {
                 new IdentityResources.OpenId(),
-                new IdentityResources.Profile(),
+                new IdentityResources.Profile()
             };
         }
         //Client allowed to request for tokens
@@ -25,24 +25,27 @@ namespace Identity.Configuration
             {
                 new Client
                 {
-                    ClientId = "Task",
+                    ClientId = "task",
                     ClientName = "Task Client",
-                    AllowedGrantTypes = GrantTypes.Code,
+                    AllowedGrantTypes = GrantTypes.Implicit,
                     //Client allowed to receive token
                     RedirectUris =
                     {
-                        "https://localhost:4444/signin"
+                        "https://localhost:4200/signin-oidc"
                     },
-                    AllowedScopes =
+                    AllowedScopes = new[]
                     {
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile
-                    },
-                    ClientSecrets =
-                    {
-                        new Secret("secret".Sha256())
                     }
                 }
+            };
+        }
+         public static IEnumerable<ApiResource> GetApis()
+        {
+            return new List<ApiResource>
+            {
+                new ApiResource("SocialAPI", "Social Network API")
             };
         }
     }

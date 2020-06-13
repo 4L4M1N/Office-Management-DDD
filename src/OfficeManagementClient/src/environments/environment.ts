@@ -4,12 +4,12 @@
 
 export const environment = {
   production: false,
-  apiUrl: '',
+  apiUrl: 'http://localhost:5000',
   openIdConnectSettings : {
-    authority: 'identity server address',
+    authority: 'http://localhost:5000/',
     client_id: 'task',
     redirect_uri: 'https://localhost:4200/signin-oidc',
-    scope: 'openid profile roles',
+    scope: 'openid profile',
     response_type: 'id_token'
   }
 };

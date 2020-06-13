@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { OpenIdConnectService } from './shared/open-id-connect.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'OfficeManagementClient';
+  /**
+   *
+   */
+  constructor(private openIdConnectService: OpenIdConnectService) {
+  }
+  ngOnInit() {
+    var path = window.location.pathname;
+    if (path != "/signin-oidc") {
+      if (!this.openIdConnectService.userAvailable) {
+        this.openIdConnectService.signIn();
+      }
+    }
+  }
 }

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Identity.Configuration;
 using Identity.Data;
 using Identity.Models;
 using Microsoft.AspNetCore.Builder;
@@ -57,6 +58,10 @@ namespace Identity
                options.Events.RaiseFailureEvents = true;
                options.Events.RaiseSuccessEvents = true;
            })// this adds the config data from DB (clients, resources)
+        //    .AddInMemoryApiResources(Config.GetApis())
+        //    .AddInMemoryClients(Config.GetClients())
+        //    .AddInMemoryIdentityResources(Config.GetIdentityResources())
+        .AddDeveloperSigningCredential()
            .AddConfigurationStore(options =>
            {
                options.ConfigureDbContext = opt =>
@@ -97,6 +102,7 @@ namespace Identity
            })
            .AddAspNetIdentity<ApplicationUser>();
            services.AddAuthentication();
+           services.AddCors();
 
         }
 
@@ -113,6 +119,7 @@ namespace Identity
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+            app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
