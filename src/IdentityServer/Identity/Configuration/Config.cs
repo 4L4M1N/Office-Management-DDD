@@ -27,12 +27,14 @@ namespace Identity.Configuration
                 {
                     ClientId = "task",
                     ClientName = "Task Client",
-                    AllowedGrantTypes = GrantTypes.Implicit,
+                    AllowedGrantTypes = GrantTypes.Code,
                     //Client allowed to receive token
                     RedirectUris =
                     {
                         "https://localhost:4200/signin-oidc"
                     },
+                     PostLogoutRedirectUris = new[]{
+                        "https://localhost:4200/" },
                     AllowedScopes = new[]
                     {
                         IdentityServerConstants.StandardScopes.OpenId,

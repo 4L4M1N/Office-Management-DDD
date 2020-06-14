@@ -26,6 +26,14 @@ export class OpenIdConnectService {
       }
       this.currentUser = user;
     });
+    // unload user
+
+    this.userManager.events.addUserUnloaded( () => {
+      if(!environment.production) {
+        console.log('User unloaded');
+      }
+      this.currentUser = null;
+    });
    }
   signIn()
   {
@@ -34,6 +42,14 @@ export class OpenIdConnectService {
         console.log('Redirection to sign in redirect');
       }
     });
+  }
+  signOut()
+  {
+    this.userManager.signoutRedirect().then(function (resp) {
+      if(!environment.production) {
+        console.log('Redirection to sign out triggered', resp)
+      }
+    })
   }
   // token must be fetched form the uri and validated
   handleCallBack()

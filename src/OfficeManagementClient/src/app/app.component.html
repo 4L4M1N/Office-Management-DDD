@@ -1,2 +1,36 @@
-
-<router-outlet></router-outlet>
+<div>
+    <!-- <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <a class="navbar-barnd"> {{title}}</a>
+            <ul class="nav navbar-nav">
+                <li>
+                    <a [routerLink]="['/tasks']" routerLinkActive="router-link-active" >Task Management</a>
+                </li>
+                <li *ngIf="openIdConnectService.userAvailable">
+                    <a (click)="openIdConnectService.signOut()">SignOut</a>
+                </li>
+            </ul>
+        </div>
+    </nav> -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button"
+                (click)="toggleNavbar()">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup"  [ngClass]="{ 'show': navbarOpen }">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="#">Features</a>
+            <a class="nav-item nav-link" href="#">Pricing</a>
+            
+            <a class="btn" *ngIf="openIdConnectService.userAvailable" (click)="openIdConnectService.signOut()">SignOut</a>
+          </div>
+        </div>
+       </div>
+      </nav>
+    <div class="container">
+        <router-outlet></router-outlet>
+    </div>
+</div>

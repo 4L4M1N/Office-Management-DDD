@@ -8,10 +8,11 @@ import { OpenIdConnectService } from './shared/open-id-connect.service';
 })
 export class AppComponent {
   title = 'OfficeManagementClient';
+  navbarOpen = false;
   /**
    *
    */
-  constructor(private openIdConnectService: OpenIdConnectService) {
+  constructor(public openIdConnectService: OpenIdConnectService) {
   }
   ngOnInit() {
     var path = window.location.pathname;
@@ -21,4 +22,10 @@ export class AppComponent {
       }
     }
   }
+
+
+  toggleNavbar() {
+    this.navbarOpen = !this.navbarOpen;
+  }
+
 }
