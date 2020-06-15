@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OpenIdConnectService } from '../shared/open-id-connect.service';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-signin-oidc',
@@ -13,8 +14,17 @@ export class SigninOidcComponent implements OnInit {
               private router: Router ) { }
 
   ngOnInit(): void {
+    this.openIdConnectService.userLoaded$.subscribe((userLoaded)=> {
+      if (userLoaded) {
+        this.router.navigate(['./tasks']);
+      }
+      else {
+        if (!environment.production) {
+          console.log("An error happened: user wasn't loaded.")
+        }
+      }
+    });
     this.openIdConnectService.handleCallBack();
-    this.router.navigate(['./tasks']);
   }
 
 }

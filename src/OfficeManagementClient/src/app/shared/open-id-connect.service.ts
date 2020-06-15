@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { UserManager, User} from 'oidc-client';
 import { environment } from 'src/environments/environment';
+import { ReplaySubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,8 @@ export class OpenIdConnectService {
 
   private userManager: UserManager = new UserManager(environment.openIdConnectSettings);
   private currentUser: User;
-
+  // A reply subject is a variant of subject we can use to wait until a value is actually produced.
+  userLoaded$ = new ReplaySubject<boolean>(1);
   get userAvailable(): boolean {
     return this.currentUser != null;
   }
@@ -25,6 +27,7 @@ export class OpenIdConnectService {
         console.log('User Loaded', user);
       }
       this.currentUser = user;
+      this.userLoaded$.next(true);
     });
     // unload user
 
@@ -33,8 +36,10 @@ export class OpenIdConnectService {
         console.log('User unloaded');
       }
       this.currentUser = null;
+      this.userLoaded$.next(false);
     });
    }
+   // signin
   signIn()
   {
     this.userManager.signinRedirect().then(function () {

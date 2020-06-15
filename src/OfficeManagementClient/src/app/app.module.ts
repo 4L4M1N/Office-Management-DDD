@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { OpenIdConnectService } from './shared/open-id-connect.service';
 import { SigninOidcComponent } from './signin-oidc/signin-oidc.component';
 import { TasksComponent } from './tasks/tasks.component';
+import { RouteGuardService } from './shared/route-guard.service';
 
 @NgModule({
    declarations: [
@@ -18,7 +19,8 @@ import { TasksComponent } from './tasks/tasks.component';
       AppRoutingModule
    ],
    providers: [
-      OpenIdConnectService
+      OpenIdConnectService,
+      RouteGuardService
    ],
    bootstrap: [
       AppComponent

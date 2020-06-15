@@ -14,16 +14,6 @@ export class AppComponent {
    */
   constructor(public openIdConnectService: OpenIdConnectService) {
   }
-  ngOnInit() {
-    var path = window.location.pathname;
-    if (path != "/signin-oidc") {
-      if (!this.openIdConnectService.userAvailable) {
-        this.openIdConnectService.signIn();
-      }
-    }
-  }
-
-
   toggleNavbar() {
     this.navbarOpen = !this.navbarOpen;
   }
