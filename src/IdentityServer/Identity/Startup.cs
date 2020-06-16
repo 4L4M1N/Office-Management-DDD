@@ -4,7 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Identity.Configuration;
 using Identity.Data;
+using Identity.Interfaces;
 using Identity.Models;
+using Identity.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -101,6 +103,7 @@ namespace Identity
                options.EnableTokenCleanup = true;
            })
            .AddAspNetIdentity<ApplicationUser>();
+           services.AddTransient<IAccountService, AccountService>();
            services.AddAuthentication();
            services.AddCors();
 
