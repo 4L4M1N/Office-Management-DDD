@@ -9,7 +9,7 @@ export const environment = {
     authority: 'http://localhost:5000/',
     client_id: 'task',
     redirect_uri: 'https://localhost:4200/signin-oidc',
-    scope: 'openid profile',
+    scope: 'openid profile roles',
     response_type: 'id_token',
     post_logout_redirect_uri: 'https://localhost:4200/'
   }

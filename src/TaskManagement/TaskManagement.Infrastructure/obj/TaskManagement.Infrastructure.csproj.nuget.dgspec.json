@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\Work_Space\\Practice\\DDD\\DDD-Practice\\OfficeManagement\\src\\TaskManagement\\TaskManagement.Infrastructure\\TaskManagement.Infrastructure.csproj": {}
+    "D:\\Work_Space\\Practice\\DDD\\DDD-Practice\\OfficeManagement\\src\\TaskManagement\\TaskManagement.Infrastructure\\TaskManagement.Infrastructure.csproj": {}
   },
   "projects": {
-    "d:\\Work_Space\\Practice\\DDD\\DDD-Practice\\OfficeManagement\\src\\TaskManagement\\TaskManagement.Core\\TaskManagement.Core.csproj": {
+    "D:\\Work_Space\\Practice\\DDD\\DDD-Practice\\OfficeManagement\\src\\TaskManagement\\TaskManagement.Core\\TaskManagement.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Work_Space\\Practice\\DDD\\DDD-Practice\\OfficeManagement\\src\\TaskManagement\\TaskManagement.Core\\TaskManagement.Core.csproj",
+        "projectUniqueName": "D:\\Work_Space\\Practice\\DDD\\DDD-Practice\\OfficeManagement\\src\\TaskManagement\\TaskManagement.Core\\TaskManagement.Core.csproj",
         "projectName": "TaskManagement.Core",
-        "projectPath": "d:\\Work_Space\\Practice\\DDD\\DDD-Practice\\OfficeManagement\\src\\TaskManagement\\TaskManagement.Core\\TaskManagement.Core.csproj",
+        "projectPath": "D:\\Work_Space\\Practice\\DDD\\DDD-Practice\\OfficeManagement\\src\\TaskManagement\\TaskManagement.Core\\TaskManagement.Core.csproj",
         "packagesPath": "C:\\Users\\Al Amin\\.nuget\\packages\\",
-        "outputPath": "d:\\Work_Space\\Practice\\DDD\\DDD-Practice\\OfficeManagement\\src\\TaskManagement\\TaskManagement.Core\\obj\\",
+        "outputPath": "D:\\Work_Space\\Practice\\DDD\\DDD-Practice\\OfficeManagement\\src\\TaskManagement\\TaskManagement.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -59,14 +59,14 @@
         }
       }
     },
-    "d:\\Work_Space\\Practice\\DDD\\DDD-Practice\\OfficeManagement\\src\\TaskManagement\\TaskManagement.Infrastructure\\TaskManagement.Infrastructure.csproj": {
+    "D:\\Work_Space\\Practice\\DDD\\DDD-Practice\\OfficeManagement\\src\\TaskManagement\\TaskManagement.Infrastructure\\TaskManagement.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Work_Space\\Practice\\DDD\\DDD-Practice\\OfficeManagement\\src\\TaskManagement\\TaskManagement.Infrastructure\\TaskManagement.Infrastructure.csproj",
+        "projectUniqueName": "D:\\Work_Space\\Practice\\DDD\\DDD-Practice\\OfficeManagement\\src\\TaskManagement\\TaskManagement.Infrastructure\\TaskManagement.Infrastructure.csproj",
         "projectName": "TaskManagement.Infrastructure",
-        "projectPath": "d:\\Work_Space\\Practice\\DDD\\DDD-Practice\\OfficeManagement\\src\\TaskManagement\\TaskManagement.Infrastructure\\TaskManagement.Infrastructure.csproj",
+        "projectPath": "D:\\Work_Space\\Practice\\DDD\\DDD-Practice\\OfficeManagement\\src\\TaskManagement\\TaskManagement.Infrastructure\\TaskManagement.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Al Amin\\.nuget\\packages\\",
-        "outputPath": "d:\\Work_Space\\Practice\\DDD\\DDD-Practice\\OfficeManagement\\src\\TaskManagement\\TaskManagement.Infrastructure\\obj\\",
+        "outputPath": "D:\\Work_Space\\Practice\\DDD\\DDD-Practice\\OfficeManagement\\src\\TaskManagement\\TaskManagement.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -85,8 +85,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "d:\\Work_Space\\Practice\\DDD\\DDD-Practice\\OfficeManagement\\src\\TaskManagement\\TaskManagement.Core\\TaskManagement.Core.csproj": {
-                "projectPath": "d:\\Work_Space\\Practice\\DDD\\DDD-Practice\\OfficeManagement\\src\\TaskManagement\\TaskManagement.Core\\TaskManagement.Core.csproj"
+              "D:\\Work_Space\\Practice\\DDD\\DDD-Practice\\OfficeManagement\\src\\TaskManagement\\TaskManagement.Core\\TaskManagement.Core.csproj": {
+                "projectPath": "D:\\Work_Space\\Practice\\DDD\\DDD-Practice\\OfficeManagement\\src\\TaskManagement\\TaskManagement.Core\\TaskManagement.Core.csproj"
               }
             }
           }

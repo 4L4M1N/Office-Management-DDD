@@ -17,5 +17,6 @@ namespace Identity.Models.Account
         public string ConfirmPassword { get; set; }
 
         public string ReturnUrl { get; set; }
+        public string Role { get; set; } = "Employee";
     }
 }

@@ -15,7 +15,8 @@ namespace Identity.Configuration
             return new List<IdentityResource>
             {
                 new IdentityResources.OpenId(),
-                new IdentityResources.Profile()
+                new IdentityResources.Profile(),
+                new IdentityResource("roles", "Your role(s)", new []{"role"}),
             };
         }
         //Client allowed to request for tokens
@@ -27,7 +28,7 @@ namespace Identity.Configuration
                 {
                     ClientId = "task",
                     ClientName = "Task Client",
-                    AllowedGrantTypes = GrantTypes.Code,
+                    AllowedGrantTypes = GrantTypes.Implicit,
                     //Client allowed to receive token
                     RedirectUris =
                     {
@@ -38,7 +39,8 @@ namespace Identity.Configuration
                     AllowedScopes = new[]
                     {
                         IdentityServerConstants.StandardScopes.OpenId,
-                        IdentityServerConstants.StandardScopes.Profile
+                        IdentityServerConstants.StandardScopes.Profile,
+                        "roles",
                     }
                 }
             };

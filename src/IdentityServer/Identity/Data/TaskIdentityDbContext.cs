@@ -9,12 +9,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Identity.Data
 {
-    public class TaskIdentityDbContext : IdentityDbContext<ApplicationUser>
+    public class TaskIdentityDbContext : IdentityDbContext
     {
         public TaskIdentityDbContext(DbContextOptions<TaskIdentityDbContext> options)
             : base(options)
         {
         }
+        public DbSet<ApplicationUser> ApplicationUsers {get; set;}
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

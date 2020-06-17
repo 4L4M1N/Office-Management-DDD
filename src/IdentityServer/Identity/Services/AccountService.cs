@@ -1,9 +1,11 @@
+using System.Linq;
 using System.Threading.Tasks;
 using Identity.Data;
 using Identity.Interfaces;
 using Identity.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Identity.Services
 {
@@ -38,6 +40,10 @@ namespace Identity.Services
             {
                 await _roleManager.CreateAsync(new IdentityRole(Roles.Manager));
             }
+             if (!await _roleManager.RoleExistsAsync(Roles.Employee))
+            {
+                await _roleManager.CreateAsync(new IdentityRole(Roles.Employee));
+            }
             var result = await _context.SaveChangesAsync();
             if(result > 0)
             {
@@ -46,5 +52,17 @@ namespace Identity.Services
             return false;
 
         }
-}
+
+        public async Task<bool> SaveRoleToAUser(string saveRole, ApplicationUser userCreated)
+        {
+            var result = await _context.Roles.FirstOrDefaultAsync(x=>x.Name == saveRole);
+            if(result != null)
+            {
+                await _userManager.AddToRoleAsync(userCreated, result.Name);
+                _context.SaveChanges();
+                return true;
+            }
+            return false;
+        }
+    }
 }

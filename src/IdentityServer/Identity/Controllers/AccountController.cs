@@ -3,6 +3,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Identity.Extensions;
+using Identity.Interfaces;
 using Identity.Models;
 using Identity.Models.Account;
 using IdentityModel;
@@ -28,6 +29,7 @@ namespace Identity.Controllers
         private readonly IClientStore _clientStore;
         private readonly IAuthenticationSchemeProvider _schemeProvider;
         private readonly IEventService _events;
+        private readonly IAccountService _accountService;
 
         public AccountController(
             UserManager<ApplicationUser> userManager,
@@ -35,6 +37,7 @@ namespace Identity.Controllers
             IIdentityServerInteractionService interaction,
             IClientStore clientStore,
             IAuthenticationSchemeProvider schemeProvider,
+            IAccountService accountService,
             IEventService events)
         {
             _userManager = userManager;
@@ -43,6 +46,7 @@ namespace Identity.Controllers
             _clientStore = clientStore;
             _schemeProvider = schemeProvider;
             _events = events;
+            _accountService = accountService;
         }
 
         /// <summary>
@@ -215,6 +219,7 @@ namespace Identity.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Register(RegisterVM model)
         {
+            await _accountService.SaveRoles();
             if (ModelState.IsValid)
             {
                 IdentityResult result = null;
@@ -238,9 +243,11 @@ namespace Identity.Controllers
                 if (result.Succeeded)
                 {
                     var userCreated = await _userManager.FindByNameAsync(model.Username);
-
+                    await _accountService.SaveRoleToAUser(model.Role,userCreated);
+                    var roles = await _userManager.GetRolesAsync(userCreated);
                     result = await _userManager.AddClaimsAsync(userCreated, new Claim[]{
-                        new Claim(JwtClaimTypes.Subject, userCreated.Id)
+                        new Claim(JwtClaimTypes.Subject, userCreated.Id),
+                        new Claim(JwtClaimTypes.Role, roles[0])
                     });
                     if (!result.Succeeded)
                     {
