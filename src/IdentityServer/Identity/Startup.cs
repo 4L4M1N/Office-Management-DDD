@@ -7,6 +7,7 @@ using Identity.Data;
 using Identity.Interfaces;
 using Identity.Models;
 using Identity.Services;
+using IdentityServer4.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -64,7 +65,12 @@ namespace Identity
         //    .AddInMemoryClients(Config.GetClients())
         //    .AddInMemoryIdentityResources(Config.GetIdentityResources())
         .AddDeveloperSigningCredential()
-           .AddConfigurationStore(options =>
+        .AddInMemoryApiResources(Config.GetApis())
+                .AddInMemoryIdentityResources(Config.GetIdentityResources())
+                .AddInMemoryClients(Config.GetClients())
+                
+
+           /*.AddConfigurationStore(options =>
            {
                options.ConfigureDbContext = opt =>
                {
@@ -101,7 +107,7 @@ namespace Identity
 
                // this enables automatic token cleanup. this is optional.
                options.EnableTokenCleanup = true;
-           })
+           })*/
            .AddAspNetIdentity<ApplicationUser>();
            services.AddTransient<IAccountService, AccountService>();
            services.AddAuthentication();

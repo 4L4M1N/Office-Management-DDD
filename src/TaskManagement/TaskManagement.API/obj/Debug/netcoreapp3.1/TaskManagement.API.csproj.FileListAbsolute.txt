@@ -129,3 +129,13 @@ D:\Work_Space\Practice\DDD\DDD-Practice\OfficeManagement\src\TaskManagement\Task
 D:\Work_Space\Practice\DDD\DDD-Practice\OfficeManagement\src\TaskManagement\TaskManagement.API\obj\Debug\netcoreapp3.1\TaskManagement.API.dll
 D:\Work_Space\Practice\DDD\DDD-Practice\OfficeManagement\src\TaskManagement\TaskManagement.API\obj\Debug\netcoreapp3.1\TaskManagement.API.pdb
 D:\Work_Space\Practice\DDD\DDD-Practice\OfficeManagement\src\TaskManagement\TaskManagement.API\obj\Debug\netcoreapp3.1\TaskManagement.API.genruntimeconfig.cache
+D:\Work_Space\Practice\DDD\DDD-Practice\OfficeManagement\src\TaskManagement\TaskManagement.API\bin\Debug\netcoreapp3.1\IdentityModel.dll
+D:\Work_Space\Practice\DDD\DDD-Practice\OfficeManagement\src\TaskManagement\TaskManagement.API\bin\Debug\netcoreapp3.1\IdentityModel.AspNetCore.OAuth2Introspection.dll
+D:\Work_Space\Practice\DDD\DDD-Practice\OfficeManagement\src\TaskManagement\TaskManagement.API\bin\Debug\netcoreapp3.1\IdentityServer4.AccessTokenValidation.dll
+D:\Work_Space\Practice\DDD\DDD-Practice\OfficeManagement\src\TaskManagement\TaskManagement.API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Work_Space\Practice\DDD\DDD-Practice\OfficeManagement\src\TaskManagement\TaskManagement.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Work_Space\Practice\DDD\DDD-Practice\OfficeManagement\src\TaskManagement\TaskManagement.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+D:\Work_Space\Practice\DDD\DDD-Practice\OfficeManagement\src\TaskManagement\TaskManagement.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+D:\Work_Space\Practice\DDD\DDD-Practice\OfficeManagement\src\TaskManagement\TaskManagement.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Work_Space\Practice\DDD\DDD-Practice\OfficeManagement\src\TaskManagement\TaskManagement.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+D:\Work_Space\Practice\DDD\DDD-Practice\OfficeManagement\src\TaskManagement\TaskManagement.API\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll

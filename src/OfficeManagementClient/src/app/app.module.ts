@@ -7,6 +7,8 @@ import { OpenIdConnectService } from './shared/open-id-connect.service';
 import { SigninOidcComponent } from './signin-oidc/signin-oidc.component';
 import { TasksComponent } from './tasks/tasks.component';
 import { RouteGuardService } from './shared/route-guard.service';
+import { TestService } from './services/test.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
    declarations: [
@@ -16,11 +18,13 @@ import { RouteGuardService } from './shared/route-guard.service';
    ],
    imports: [
       BrowserModule,
-      AppRoutingModule
+      AppRoutingModule,
+      HttpClientModule
    ],
    providers: [
       OpenIdConnectService,
-      RouteGuardService
+      RouteGuardService,
+      TestService
    ],
    bootstrap: [
       AppComponent

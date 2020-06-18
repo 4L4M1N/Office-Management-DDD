@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TaskManagement.Core.Model.BoardAggregate;
 using TaskManagement.Infrastructure.Data;
@@ -11,6 +12,7 @@ using Task = TaskManagement.Core.Model.BoardAggregate.Task;
 namespace TaskManagement.API.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize]
     [ApiController]
     public class TestController : ControllerBase
     {
@@ -27,10 +29,12 @@ namespace TaskManagement.API.Controllers
             //board.AddTask(task);
             //_context.Boards.Add(board);
             //_context.SaveChanges();
-            var first = _context.Boards.FirstOrDefault();
-            _context.Boards.Remove(first);
-            var i = _context.SaveChanges();
-            return Ok(i);
+           string a = "Success";
+           
+            // var first = _context.Boards.FirstOrDefault();
+            // _context.Boards.Remove(first);
+            // var i = _context.SaveChanges();
+            return Ok(a);
         }
     }
 }

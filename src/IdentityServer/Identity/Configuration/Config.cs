@@ -30,6 +30,7 @@ namespace Identity.Configuration
                     ClientName = "Task Client",
                     AllowedGrantTypes = GrantTypes.Implicit,
                     //Client allowed to receive token
+                    AllowAccessTokensViaBrowser = true,
                     RedirectUris =
                     {
                         "https://localhost:4200/signin-oidc"
@@ -41,6 +42,7 @@ namespace Identity.Configuration
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
                         "roles",
+                        "SocialAPI",
                     }
                 }
             };
@@ -49,7 +51,7 @@ namespace Identity.Configuration
         {
             return new List<ApiResource>
             {
-                new ApiResource("SocialAPI", "Social Network API")
+                new ApiResource("SocialAPI", "Social Network API", new[] { "role" })
             };
         }
     }

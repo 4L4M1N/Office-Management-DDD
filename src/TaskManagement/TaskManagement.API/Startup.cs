@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using IdentityServer4.AccessTokenValidation;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,6 +28,7 @@ namespace TaskManagement.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
             services.AddControllers();
             services.AddDbContext<TaskDbContext>(options =>
             {
@@ -37,6 +39,12 @@ namespace TaskManagement.API
 
                     });
             });
+            services.AddAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme)
+                .AddIdentityServerAuthentication(options => 
+                {
+                    options.Authority = "http://localhost:5000";
+                    options.ApiName = "SocialAPI";
+                });
 
         }
 
@@ -51,9 +59,9 @@ namespace TaskManagement.API
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
+            app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseAuthorization();
-
+            app.UseAuthentication();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
