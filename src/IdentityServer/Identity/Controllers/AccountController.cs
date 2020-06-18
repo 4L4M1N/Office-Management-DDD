@@ -245,10 +245,10 @@ namespace Identity.Controllers
                     var userCreated = await _userManager.FindByNameAsync(model.Username);
                     await _accountService.SaveRoleToAUser(model.Role,userCreated);
                     var roles = await _userManager.GetRolesAsync(userCreated);
-                    await _userManager.AddClaimAsync(user, new System.Security.Claims.Claim("userName", user.UserName));
-                    await _userManager.AddClaimAsync(user, new System.Security.Claims.Claim("name", user.Email));
-                    await _userManager.AddClaimAsync(user, new System.Security.Claims.Claim("email", user.Email));
-                    await _userManager.AddClaimAsync(user, new System.Security.Claims.Claim("role", roles[0]));
+                    await _userManager.AddClaimAsync(user, new Claim("userName", user.UserName));
+                    await _userManager.AddClaimAsync(user, new Claim("name", user.Email));
+                    await _userManager.AddClaimAsync(user, new Claim("email", user.Email));
+                    await _userManager.AddClaimAsync(user, new Claim("role", roles[0]));
                     if (!result.Succeeded)
                     {
                         ModelState.AddModelError(result.Errors.First().Code, result.Errors.First().Description);
