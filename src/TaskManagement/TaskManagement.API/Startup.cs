@@ -39,10 +39,13 @@ namespace TaskManagement.API
 
                     });
             });
-            services.AddAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme)
+            services.AddAuthentication(options => {
+                options.DefaultScheme = IdentityServerAuthenticationDefaults.AuthenticationScheme;
+                options.DefaultAuthenticateScheme = IdentityServerAuthenticationDefaults.AuthenticationScheme;
+            })
                 .AddIdentityServerAuthentication(options => 
                 {
-                    options.Authority = "http://localhost:5000";
+                    options.Authority = "https://localhost:5001";
                     options.ApiName = "SocialAPI";
                 });
 
@@ -60,8 +63,10 @@ namespace TaskManagement.API
 
             app.UseRouting();
             app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+             app.UseAuthentication();
             app.UseAuthorization();
-            app.UseAuthentication();
+           
+            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

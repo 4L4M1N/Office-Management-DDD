@@ -9,7 +9,7 @@ constructor(private http: HttpClient) { }
 
 GetTest() {
   console.log('hadn');
-  return this.http.get(this.baseURL + 'allboard');
+  return this.http.get(this.baseURL + 'allboard',{responseType: 'text'});
 }
 
 }

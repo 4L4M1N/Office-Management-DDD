@@ -12,7 +12,7 @@ using Task = TaskManagement.Core.Model.BoardAggregate.Task;
 namespace TaskManagement.API.Controllers
 {
     [Route("api/[controller]")]
-    [Authorize]
+    
     [ApiController]
     public class TestController : ControllerBase
     {
@@ -21,6 +21,7 @@ namespace TaskManagement.API.Controllers
         {
             _context = context;
         }
+        [Authorize]
         [HttpGet("allboard")]
         public async Task<IActionResult>AllBoard()
         {

@@ -8,7 +8,8 @@ import { SigninOidcComponent } from './signin-oidc/signin-oidc.component';
 import { TasksComponent } from './tasks/tasks.component';
 import { RouteGuardService } from './shared/route-guard.service';
 import { TestService } from './services/test.service';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthorizationHeaderInterceptor } from './shared/AuthorizationHeaderInterceptor';
 
 @NgModule({
    declarations: [
@@ -22,6 +23,11 @@ import { HttpClientModule } from '@angular/common/http';
       HttpClientModule
    ],
    providers: [
+      {
+         provide: HTTP_INTERCEPTORS,
+         useClass: AuthorizationHeaderInterceptor,
+         multi: true
+      },
       OpenIdConnectService,
       RouteGuardService,
       TestService
