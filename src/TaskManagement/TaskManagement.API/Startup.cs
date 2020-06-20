@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using IdentityServer4.AccessTokenValidation;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -12,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using TaskManagement.API.Services;
 using TaskManagement.Infrastructure.Data;
 
 namespace TaskManagement.API
@@ -43,11 +45,13 @@ namespace TaskManagement.API
                 options.DefaultScheme = IdentityServerAuthenticationDefaults.AuthenticationScheme;
                 options.DefaultAuthenticateScheme = IdentityServerAuthenticationDefaults.AuthenticationScheme;
             })
-                .AddIdentityServerAuthentication(options => 
-                {
-                    options.Authority = "https://localhost:5001";
-                    options.ApiName = "SocialAPI";
-                });
+            .AddIdentityServerAuthentication(options => 
+            {
+                options.Authority = "https://localhost:5001";
+                options.ApiName = "SocialAPI";
+            });
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped<IUserInfoService, UserInfoService>();
 
         }
 
