@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "ZP4IiLF6hfVpWw3LtmhyLfsydxruhLXpo+DAzdwaU0HfLoi7IgOJI5LrMppNRuIrnlRGJ5pAAyt1r3cnJEAzkA==",
+  "dgSpecHash": "DuadR8t6FVWGqib6Hsi8PMCzcyl+Mafc3VFzK7zbxC0OOfEgsMyolizXJJu5ifLnDZt429NC1C5aM/bmS15XoQ==",
   "success": true,
   "projectFilePath": "d:\\Work_Space\\Practice\\DDD\\DDD-Practice\\OfficeManagement\\src\\TaskManagement\\TaskManagement.API\\TaskManagement.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Al Amin\\.nuget\\packages\\autofac\\5.2.0\\autofac.5.2.0.nupkg.sha512",
+    "C:\\Users\\Al Amin\\.nuget\\packages\\autofac.extensions.dependencyinjection\\6.0.0\\autofac.extensions.dependencyinjection.6.0.0.nupkg.sha512",
     "C:\\Users\\Al Amin\\.nuget\\packages\\identitymodel\\4.0.0\\identitymodel.4.0.0.nupkg.sha512",
     "C:\\Users\\Al Amin\\.nuget\\packages\\identitymodel.aspnetcore.oauth2introspection\\4.0.1\\identitymodel.aspnetcore.oauth2introspection.4.0.1.nupkg.sha512",
     "C:\\Users\\Al Amin\\.nuget\\packages\\identityserver4.accesstokenvalidation\\3.0.1\\identityserver4.accesstokenvalidation.3.0.1.nupkg.sha512",
