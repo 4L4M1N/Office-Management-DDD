@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Autofac;
 using IdentityServer4.AccessTokenValidation;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -52,8 +53,13 @@ namespace TaskManagement.API
                 options.Authority = "https://localhost:5001";
                 options.ApiName = "SocialAPI";
             });
-            services.ConfigureApplicationServices(Configuration);
+            //services.ConfigureApplicationServices(Configuration);
 
+        }
+        public void ConfigureContainer(ContainerBuilder builder)
+        {
+            builder.RegisterType<HttpContextAccessor>().As<IHttpContextAccessor>().SingleInstance();
+            builder.RegisterType<UserInfoService>().As<IUserInfoService>().InstancePerLifetimeScope();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
