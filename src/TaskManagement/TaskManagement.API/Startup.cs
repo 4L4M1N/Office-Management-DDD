@@ -13,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using TaskManagement.API.Extensions;
 using TaskManagement.API.Services;
 using TaskManagement.Infrastructure.Data;
 
@@ -51,8 +52,7 @@ namespace TaskManagement.API
                 options.Authority = "https://localhost:5001";
                 options.ApiName = "SocialAPI";
             });
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddScoped<IUserInfoService, UserInfoService>();
+            services.ConfigureApplicationServices(Configuration);
 
         }
 

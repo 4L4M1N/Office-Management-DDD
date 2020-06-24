@@ -139,3 +139,5 @@ D:\Work_Space\Practice\DDD\DDD-Practice\OfficeManagement\src\TaskManagement\Task
 D:\Work_Space\Practice\DDD\DDD-Practice\OfficeManagement\src\TaskManagement\TaskManagement.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 D:\Work_Space\Practice\DDD\DDD-Practice\OfficeManagement\src\TaskManagement\TaskManagement.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
 D:\Work_Space\Practice\DDD\DDD-Practice\OfficeManagement\src\TaskManagement\TaskManagement.API\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+D:\Work_Space\Practice\DDD\DDD-Practice\OfficeManagement\src\TaskManagement\TaskManagement.API\bin\Debug\netcoreapp3.1\Autofac.dll
+D:\Work_Space\Practice\DDD\DDD-Practice\OfficeManagement\src\TaskManagement\TaskManagement.API\bin\Debug\netcoreapp3.1\Autofac.Extensions.DependencyInjection.dll
